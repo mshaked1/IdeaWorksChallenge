@@ -19,6 +19,8 @@ body {
     display: inline; }
   .nav .navInfo {
     margin: 0 10px; }
+  .nav .navInfo:hover {
+    text-decoration: underline; }
 
 .info {
   float: right;

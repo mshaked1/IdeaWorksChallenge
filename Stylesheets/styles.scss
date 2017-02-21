@@ -33,6 +33,10 @@ $breakpoints: ('phone': 640px,
   .navInfo {
     margin: 0 10px;
   }
+
+  .navInfo:hover {
+    text-decoration: underline;
+  }
 }
 
 .info {
