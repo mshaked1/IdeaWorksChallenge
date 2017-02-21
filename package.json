@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "./node_modules/.bin/webpack -w",
-    "heroku-postbuild": "webpack -p ./webpack.config.js --progress"
+    "heroku-postbuild": "webpack -p ./webpack.config.js --progress --display-error-details"
   },
   "author": "Micky Shaked",
   "dependencies": {
