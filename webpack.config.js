@@ -2,11 +2,11 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-	entry: './index.js',
+	devtool: 'source-map',
+	entry: './src/index.js',
 	output: {
 		path: path.join(__dirname, 'build'),
 		filename: 'webpack-bundle.js',
-		publicPath: '/build/'
 	},
 	module: {
 		loaders: [
@@ -20,7 +20,7 @@ module.exports = {
 			},
 			{
 				test: /(\.css|\.scss)$/,
-				loaders: ['style', 'css', 'sass']
+				loaders: ['style', 'css', 'resolve-url-loader','sass?sourceMap']
 			},
       {
         test: /\.(jpg)$/,

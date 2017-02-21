@@ -15,8 +15,11 @@
     "node-sass": "^3.8.0",
     "react": "^15.2.1",
     "react-dom": "^15.2.1",
+    "react-slick": "^0.14.6",
     "reactify": "^1.1.1",
+    "resolve-url-loader": "^2.0.0",
     "sass-loader": "^4.0.0",
+    "slick-carousel": "^1.6.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
   },
