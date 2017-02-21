@@ -6,50 +6,54 @@ body {
   font-weight: 100;
   src: url("../Assets/fonts/Springville-Regular3.otf") format("opentype"); }
 .nav {
+  padding: 50px 100px;
   background-color: white;
   z-index: 1;
   top: 0;
   width: 100%;
-  height: 150px;
+  height: 50px;
   position: fixed;
   max-width: 1440px; }
   .nav img {
     vertical-align: middle;
-    display: inline;
-    max-width: 50%;
-    max-height: 50%; }
+    display: inline; }
   .nav .navInfo {
     margin: 0 10px; }
 
 .info {
+  float: right;
   display: inline-flex;
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center; }
 
 .sliderWrapper {
-  margin: 150px auto 0px; }
+  margin: 50px auto 0px; }
 
 .grid {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
+  padding: 50px 100px;
+  column-count: 3;
+  column-gap: 40px;
   font-weight: 100; }
   .grid .gridItem {
-    width: 30%;
-    margin: 5px 10px; }
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px; }
     .grid .gridItem img {
       max-width: 100%; }
   .grid .date {
-    margin-top: 10px 0px;
-    font-size: 11px; }
+    margin: 20px 0px;
+    font-size: 11px;
+    font-family: arial !important;
+    color: grey; }
   .grid .title {
-    font-size: 48px; }
+    font-size: 48px;
+    margin-bottom: 20px; }
+  .grid .title:hover {
+    text-decoration: underline; }
   .grid .author {
-    font-size: 14px; }
+    font-size: 14px;
+    margin-bottom: 20px; }
   .grid .date, .grid .title, .grid .author {
     font-family: Springville; }
 
@@ -59,5 +63,15 @@ body {
 .footer {
   margin-top: 100px;
   text-align: center; }
+
+@media (max-width: 768px) {
+  .grid {
+    column-count: 2 !important; } }
+@media (max-width: 320px) {
+  .nav {
+    height: 50px; }
+
+  .sliderWrapper {
+    margin-top: 50px; } }
 
 /*# sourceMappingURL=styles.css.map */

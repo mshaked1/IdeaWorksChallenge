@@ -9,10 +9,13 @@ body{
 }
 
 $spring: Springville;
-
-$navHeight: 150px;
+$navHeight: 50px;
+$breakpoints: ('phone': 640px, 
+               'tablet': 768px, 
+               'desktop': 1024px) !default;
 
 .nav {
+  padding: 50px 100px;
   background-color: white;
   z-index: 1;
   top: 0;
@@ -23,8 +26,8 @@ $navHeight: 150px;
   img {
     vertical-align: middle;
     display:inline;
-    max-width:50%;
-    max-height:50%;
+    // max-width:50%;
+    // max-height:50%;
   }
 
   .navInfo {
@@ -33,6 +36,8 @@ $navHeight: 150px;
 }
 
 .info {
+  
+  float: right;
   display: inline-flex;
   flex-wrap: nowrap;
   justify-content: flex-end;
@@ -44,34 +49,47 @@ $navHeight: 150px;
 }
 
 .grid {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: flex-start;
-  flex-wrap: wrap;
+  padding: 50px 100px;
+  column-count: 3;
+  column-gap: 40px;
   font-weight: 100;
 
   .gridItem {
-    // flex-grow: 1;
-    width: 30%;
-    margin: 5px 10px;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 20px;
     img {
       max-width: 100%
     }
   }
 
+  // .gridItem:nth-child(3n+1) {
+  //   padding-left: 0px;
+  // }
+
+  // .gridItem:nth-child(3n+3) {
+  //   padding-right: 0px;
+  // }
+
   .date {
-    margin-top: 10px 0px;
+    margin: 20px 0px;
     font-size: 11px;
+    font-family: arial !important;
+    color: grey;
   }
 
   .title {
     font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .title:hover {
+    text-decoration: underline;
   }
 
   .author {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .date, .title, .author {
@@ -88,10 +106,21 @@ $navHeight: 150px;
   text-align: center;
 }
 
-$breakpoints: (phone: 640px, 
-               tablet: 768px, 
-               desktop: 1024px) !default;
 
-// @include media(">phone", "<tablet") {
+@media (max-width: 768px) {
+  .grid {
+    column-count: 2 !important;
+  }
+}
 
-// }
+@media (max-width: 320px) {
+  $navHeight: 50px;
+
+  .nav {
+    height: $navHeight
+  }
+
+  .sliderWrapper {
+    margin-top: $navHeight
+  }
+}
