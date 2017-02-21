@@ -6,20 +6,8 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'build'),
 		filename: 'webpack-bundle.js',
-		// publicPath: '/build'
+		publicPath: '/build/'
 	},
-	// plugins: [
-	// 	new webpack.HotModuleReplacementPlugin()
-	// ],
-	// devServer: {
-	// 	hot: true,
-	// 	contentBase: './build',
-	// 	inline: true,
-	// 	port: 3000,
-	// 	stats: {
-	// 		colors: true
-	// 	}
-	// },
 	module: {
 		loaders: [
 			{
