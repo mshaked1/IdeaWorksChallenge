@@ -1,5 +1,4 @@
 body{
-  margin: 100px 50px;
   font: bold 11px arial;
 }
 
@@ -14,11 +13,13 @@ $spring: Springville;
 $navHeight: 150px;
 
 .nav {
+  background-color: white;
+  z-index: 1;
   top: 0;
   width: 100%;
   height: $navHeight;
   position: fixed;  
-
+  max-width: 1440px;
   img {
     vertical-align: middle;
     display:inline;
@@ -43,6 +44,7 @@ $navHeight: 150px;
 }
 
 .grid {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -54,6 +56,9 @@ $navHeight: 150px;
     // flex-grow: 1;
     width: 30%;
     margin: 5px 10px;
+    img {
+      max-width: 100%
+    }
   }
 
   .date {
