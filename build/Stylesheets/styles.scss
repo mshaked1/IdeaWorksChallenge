@@ -18,7 +18,7 @@ $spring: Springville;
 $navHeight: 50px;
 
 .nav {
-  padding: 25px 100px 25px;
+  padding: 25px 10% 25px 5%;
   background-color: white;
   z-index: 1;
   top: 0;
@@ -79,7 +79,7 @@ $navHeight: 50px;
 
 .grid {
   @include center;
-  padding: 50px 100px;
+  padding: 10%;
   column-count: 3;
   column-gap: 40px;
   font-weight: 100;
@@ -87,7 +87,7 @@ $navHeight: 50px;
   .gridItem {
     display: inline-block;
     width: 100%;
-    padding: 20px 20px;
+    padding: 5%;
     img {
       max-width: 100%
     }
@@ -119,10 +119,6 @@ $navHeight: 50px;
   }
 }
 
-.author {
-  font-size: 14px;
-}
-
 .footer {
   margin-top: 100px;
   text-align: center;
@@ -130,8 +126,17 @@ $navHeight: 50px;
 
 
 @media (max-width: 768px) {
+  $padding: 10px;
   .grid {
     column-count: 2 !important;
+    padding-left: $padding;
+    padding-right: $padding;
+    .gridItem {
+      padding: $padding !important;
+    }
+    .title {
+      font-size: 32px !important;
+    }
   }
 }
 

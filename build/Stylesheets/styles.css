@@ -6,7 +6,7 @@ body {
   font-weight: 100;
   src: url("../Assets/fonts/Springville-Regular3.otf") format("opentype"); }
 .nav {
-  padding: 25px 100px 25px;
+  padding: 25px 10% 25px 5%;
   background-color: white;
   z-index: 1;
   top: 0;
@@ -48,14 +48,14 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 50px 100px;
+  padding: 10%;
   column-count: 3;
   column-gap: 40px;
   font-weight: 100; }
   .grid .gridItem {
     display: inline-block;
     width: 100%;
-    padding: 20px 20px; }
+    padding: 5%; }
     .grid .gridItem img {
       max-width: 100%; }
   .grid .date {
@@ -74,16 +74,19 @@ body {
   .grid .date, .grid .title, .grid .author {
     font-family: Springville; }
 
-.author {
-  font-size: 14px; }
-
 .footer {
   margin-top: 100px;
   text-align: center; }
 
 @media (max-width: 768px) {
   .grid {
-    column-count: 2 !important; } }
+    column-count: 2 !important;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .grid .gridItem {
+      padding: 10px !important; }
+    .grid .title {
+      font-size: 32px !important; } }
 @media (max-width: 320px) {
   .nav {
     height: 50px; }

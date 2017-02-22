@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "sass": "sass --watch build/Stylesheets:build/Stylesheets",
     "build": "./node_modules/.bin/webpack -w",
     "heroku-postbuild": "webpack -p ./webpack.config.js --progress --display-error-details"
   },
