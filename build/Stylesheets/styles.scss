@@ -8,28 +8,39 @@ body{
     src: url('../Assets/fonts/Springville-Regular3.otf') format("opentype");
 }
 
+@mixin center() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 $spring: Springville;
 $navHeight: 50px;
-$breakpoints: ('phone': 640px, 
-               'tablet': 768px, 
-               'desktop': 1024px) !default;
 
 .nav {
-  padding: 25px 100px;
+  padding: 25px 100px 25px;
   background-color: white;
   z-index: 1;
   top: 0;
   width: 100%;
-  height: $navHeight;
+  box-sizing: border-box;
+  height: 50px;
   position: fixed;
   ul {
+    background-color: white;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    width: 100%;
 
     li {
+      background-color: white;
       display: inline-block;
       list-style-type: none;
+    }
+
+    li:first-child {
+      margin-right: auto;
 
       img {
         vertical-align: middle;
@@ -37,10 +48,6 @@ $breakpoints: ('phone': 640px,
         max-width:50%;
         max-height:50%;
       }
-    }
-
-    li:first-child {
-      margin-right: auto;
     }
 
     li:nth-child(n+2) {
@@ -62,10 +69,16 @@ $breakpoints: ('phone': 640px,
 // }
 
 .sliderWrapper {
-  margin: $navHeight auto 0px;
+  margin: 100px auto 0px;
+
+  img {
+    @include center;
+    max-width: 1440px;
+  }
 }
 
 .grid {
+  @include center;
   padding: 50px 100px;
   column-count: 3;
   column-gap: 40px;
@@ -79,14 +92,6 @@ $breakpoints: ('phone': 640px,
       max-width: 100%
     }
   }
-
-  // .gridItem:nth-child(3n+1) {
-  //   padding-left: 0px;
-  // }
-
-  // .gridItem:nth-child(3n+3) {
-  //   padding-right: 0px;
-  // }
 
   .date {
     margin: 20px 0px;

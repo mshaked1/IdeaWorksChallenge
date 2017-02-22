@@ -6,36 +6,48 @@ body {
   font-weight: 100;
   src: url("../Assets/fonts/Springville-Regular3.otf") format("opentype"); }
 .nav {
-  padding: 25px 100px;
+  padding: 25px 100px 25px;
   background-color: white;
   z-index: 1;
   top: 0;
   width: 100%;
+  box-sizing: border-box;
   height: 50px;
   position: fixed; }
   .nav ul {
+    background-color: white;
     display: flex;
     justify-content: flex-end;
-    align-items: center; }
+    align-items: center;
+    width: 100%; }
     .nav ul li {
+      background-color: white;
       display: inline-block;
       list-style-type: none; }
-      .nav ul li img {
+    .nav ul li:first-child {
+      margin-right: auto; }
+      .nav ul li:first-child img {
         vertical-align: middle;
         display: inline;
         max-width: 50%;
         max-height: 50%; }
-    .nav ul li:first-child {
-      margin-right: auto; }
     .nav ul li:nth-child(n+2) {
       margin: 0 10px; }
     .nav ul li:hover {
       text-decoration: underline; }
 
 .sliderWrapper {
-  margin: 50px auto 0px; }
+  margin: 100px auto 0px; }
+  .sliderWrapper img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px; }
 
 .grid {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 50px 100px;
   column-count: 3;
   column-gap: 40px;
