@@ -6,12 +6,16 @@ class Nav extends Component {
   render() {
     return (
       <div className='nav'>
-        <img src={logo} />
-        <div className='info'>
-          <span className='navInfo'>212.555.555</span>
-          <span className='navInfo'>LOGIN</span>
-          <img className='navInfo' src={hamburger} />
-        </div>
+        <ul>
+          <li>
+            <img src={logo} />
+          </li>
+          <li>212.555.555</li>
+          <li>LOGIN</li>
+          <li>
+            <img src={hamburger} />
+          </li>
+        </ul>
       </div>
     );
   }

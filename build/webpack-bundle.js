@@ -21611,21 +21611,29 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'nav' },
-	        _react2.default.createElement('img', { src: _logo2.default }),
 	        _react2.default.createElement(
-	          'div',
-	          { className: 'info' },
+	          'ul',
+	          null,
 	          _react2.default.createElement(
-	            'span',
-	            { className: 'navInfo' },
+	            'li',
+	            null,
+	            _react2.default.createElement('img', { src: _logo2.default })
+	          ),
+	          _react2.default.createElement(
+	            'li',
+	            null,
 	            '212.555.555'
 	          ),
 	          _react2.default.createElement(
-	            'span',
-	            { className: 'navInfo' },
+	            'li',
+	            null,
 	            'LOGIN'
 	          ),
-	          _react2.default.createElement('img', { className: 'navInfo', src: _hamburger2.default })
+	          _react2.default.createElement(
+	            'li',
+	            null,
+	            _react2.default.createElement('img', { src: _hamburger2.default })
+	          )
 	        )
 	      );
 	    }
